@@ -192,9 +192,6 @@ fi
 # Certain machines tend to barf when you try and bcopy 8MB.
 # Figure out how much we can use.
 echo "Checking to see if you have $MB MB; please wait for a moment..."
-MB=`../bin/$OS/memsize $MB`
-MB=`../bin/$OS/memsize $MB`
-MB=`../bin/$OS/memsize $MB`
 if [ `expr $SYNC_MAX \* $MB` -gt `expr $TOTAL_MEM` ]
 then
 	MB=`expr $TOTAL_MEM / $SYNC_MAX`
